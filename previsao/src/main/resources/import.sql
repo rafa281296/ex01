@@ -1,0 +1,2 @@
+insert into previsao (id, nome, tempmin, tempmax, humidadear, descr) values (1, 'segunda-feira', 14.5, 20.3, 40,'aqui temos os dados de segunda-feira');
+insert into previsao (id, nome, tempmin, tempmax, humidadear, descr) values (2, 'terca-feira', 20.5, 25.10, 50,'aqui temos os dados de terca-feira');
