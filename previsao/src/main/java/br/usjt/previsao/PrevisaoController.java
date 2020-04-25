@@ -19,10 +19,11 @@ public class PrevisaoController {
 	public ModelAndView listarAlunos() {
 		// passe o nome da página ao construtor
 		ModelAndView mv = new ModelAndView("lista_prev");
+		
 		// Busque a coleção com o repositório
 		List<Previsao> previ = previsaoRepo.findAll();
 		// adicione a coleção ao objeto ModelAndView
-		mv.addObject(new Previsao());
+		mv.addObject("previ", previ);
 		// devolva o ModelAndView
 		return mv;
 	}
@@ -30,6 +31,6 @@ public class PrevisaoController {
 	@PostMapping("/previsao")
 	public String salvar (Previsao previsoes) {
 	previsaoRepo.save(previsoes);
-	return "redirect:/alunos";
+	return "redirect:/previsao";
 	}
 }
